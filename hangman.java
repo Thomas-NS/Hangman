@@ -10,13 +10,12 @@ public class hangman {
 			URL url = new URL("https://www.mit.edu/~ecprice/wordlist.10000");
 			BufferedReader rd = new BufferedReader(new InputStreamReader(url.openStream()));
 			int inputSize = 10000;
-			String[] words = new String[inputSize];
+			String[] words = new String[inputSize]; 
 
 			for(int i = 0; i < inputSize; i++) {
 				words[i] = rd.readLine();
 			}
 	        rd.close();
-
 	        gameStart(words, inputSize);
 	    }
 	    catch(Exception e) {
